@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fasum/screens/home_screen.dart';
 import 'package:fasum/screens/sign_up_screen.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+final googleSignIn = GoogleSignIn(
+    scopes: [
+      'email',
+    ],
+    clientId:
+        '928610520931-r28737cvjhu8qn0nrfc8sjasgn7p1nlb.apps.googleusercontent.com');
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -14,6 +22,31 @@ class SignInScreenState extends State<SignInScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   String _errorMessage = '';
+
+  Future<void> _signInWithGoogle() async {
+    try {
+      final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+      if (googleUser != null) {
+        final GoogleSignInAuthentication googleAuth =
+            await googleUser.authentication;
+        final credential = GoogleAuthProvider.credential(
+          accessToken: googleAuth.accessToken,
+          idToken: googleAuth.idToken,
+        );
+        await FirebaseAuth.instance.signInWithCredential(credential);
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
+        );
+      }
+    } catch (error) {
+      setState(() {
+        _errorMessage = error.toString();
+      });
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text(_errorMessage),
+      ));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -115,6 +148,10 @@ class SignInScreenState extends State<SignInScreen> {
                 child: const Text('Sign In'),
               ),
               const SizedBox(height: 32.0),
+              ElevatedButton(
+                  onPressed: _signInWithGoogle,
+                  child: Text('Sign In With Google')),
+              const SizedBox(height: 16.0),
               TextButton(
                 onPressed: () {
                   Navigator.push(
