@@ -44,38 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBbb7gzTfTwWuBrdeN10U95HA20K05_ZJI',
-    appId: '1:928610520931:web:467e6bf8607a70e5428d56',
-    messagingSenderId: '928610520931',
-    projectId: 'fasum-app-9cf31',
-    authDomain: 'fasum-app-9cf31.firebaseapp.com',
-    storageBucket: 'fasum-app-9cf31.appspot.com',
-    measurementId: 'G-XQT43JF17B',
+    apiKey: 'AIzaSyC17RJXpI3Ifxp4Zm9LQoxVkIHLHHH0Cnc',
+    appId: '1:341161918295:web:06e47adfbe12b2a8c44812',
+    messagingSenderId: '341161918295',
+    projectId: 'fasum-app-455e3',
+    authDomain: 'fasum-app-455e3.firebaseapp.com',
+    storageBucket: 'fasum-app-455e3.appspot.com',
+    measurementId: 'G-ZBZWDV3CMS',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBVhVJhix8RMGSbrud-grJNoqrUkebUe8g',
-    appId: '1:928610520931:android:edabf3e8af1a2049428d56',
-    messagingSenderId: '928610520931',
-    projectId: 'fasum-app-9cf31',
-    storageBucket: 'fasum-app-9cf31.appspot.com',
+    apiKey: 'AIzaSyDmmHwVYKFGkr0dk6zsN8vRP0k6tPAvxSs',
+    appId: '1:341161918295:android:3bf1ee442921d589c44812',
+    messagingSenderId: '341161918295',
+    projectId: 'fasum-app-455e3',
+    storageBucket: 'fasum-app-455e3.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCBJrtpoZ8A-uPYC2R8_dEyM9VtxvD9q-U',
-    appId: '1:928610520931:ios:f62e867b983e86e7428d56',
-    messagingSenderId: '928610520931',
-    projectId: 'fasum-app-9cf31',
-    storageBucket: 'fasum-app-9cf31.appspot.com',
+    apiKey: 'AIzaSyCW8FkZ5T2TzKZS0HbJL69sC9SY-0Kz1X8',
+    appId: '1:341161918295:ios:bda2adef0aaa9306c44812',
+    messagingSenderId: '341161918295',
+    projectId: 'fasum-app-455e3',
+    storageBucket: 'fasum-app-455e3.appspot.com',
+    iosClientId: '341161918295-vu5g4dedavd4p79vv46cri6l251452g7.apps.googleusercontent.com',
     iosBundleId: 'com.example.fasum',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCBJrtpoZ8A-uPYC2R8_dEyM9VtxvD9q-U',
-    appId: '1:928610520931:ios:3d398d45a6477197428d56',
-    messagingSenderId: '928610520931',
-    projectId: 'fasum-app-9cf31',
-    storageBucket: 'fasum-app-9cf31.appspot.com',
+    apiKey: 'AIzaSyCW8FkZ5T2TzKZS0HbJL69sC9SY-0Kz1X8',
+    appId: '1:341161918295:ios:8fa2932625d6cfd8c44812',
+    messagingSenderId: '341161918295',
+    projectId: 'fasum-app-455e3',
+    storageBucket: 'fasum-app-455e3.appspot.com',
+    iosClientId: '341161918295-gm46u7o16r209aifpq50bjslv43jndmb.apps.googleusercontent.com',
     iosBundleId: 'com.example.fasum.RunnerTests',
   );
 }

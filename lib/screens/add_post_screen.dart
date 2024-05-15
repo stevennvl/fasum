@@ -16,6 +16,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
     super.initState();
     _image = File('');
   }
+
   final picker = ImagePicker();
   Future<void> _getImage() async {
     final pickedFile = await picker.pickImage(source: ImageSource.camera);
